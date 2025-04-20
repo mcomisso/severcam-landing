@@ -101,15 +101,17 @@
         padding: 0.75rem 1.75rem;
         font-size: 1rem;
         font-weight: 600;
-        background: var(--color-accent);
+        background: linear-gradient(135deg, var(--color-accent), #17b1ad);
         color: white;
         border-radius: var(--radius);
         text-decoration: none;
-        transition: background 0.2s ease;
+        box-shadow: 0 10px 20px rgba(27, 200, 200, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .btn-primary:hover {
-        background: #17b1ad;
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(27, 200, 200, 0.4);
       }
 
       .hero-image {
@@ -156,12 +158,53 @@
         color: #636366;
         padding: 2rem;
       }
+      /* What Is SeverCam Section */
+      .section-what {
+        background: white;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 3rem 2rem;
+        margin: 6rem auto;
+        max-width: 800px;
+        text-align: center;
+      }
+      .section-what h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .section-what p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: var(--color-dark);
+      }
+      .section-what ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin: 2rem auto 0;
+        max-width: 500px;
+        text-align: left;
+      }
+      .section-what li {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+      }
+      /* Download section logo styled as app icon */
+      .download-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+      }
     </style>
   </head>
 
   <body>
     <header>
-      <img src="logo.png" alt="SeverCam Logo" class="logo">
+      <!-- Site logo -->
+      <img src="images/SeverCamLogo.png" alt="SeverCam Logo" class="logo">
       <nav>
         <a href="#features">Features</a>
         <a href="#download">Download</a>
@@ -172,30 +215,68 @@
     <section class="hero">
       <img src="screenshot.png" alt="App screenshot" class="hero-image">
       <div class="hero-content">
-        <h1>Vertigo. Jaws. Severance.</h1>
-        <p>Recreate cinema’s vertigo shot with a simple tilt—SeverCam.</p>
+        <h1>SeverCam – Reality, Reframed.</h1>
+        <p>Create mind-bending dolly zoom shots with just your iPhone. Inspired by Severance. No rig. No post-production. Just tap and move.</p>
+        <a href="#video" class="btn-primary" style="margin-right:1rem;">▶️ Watch It In Action</a>
+        <a href="#download" class="btn-primary">📥 Get SeverCam</a>
       </div>
+    </section>
+
+    <section id="what" class="section-what">
+      <h2>What Is SeverCam?</h2>
+      <p>That feeling when the world stretches and snaps around you.</p>
+      <p>SeverCam recreates the iconic dolly zoom effect in real time. As you move closer or farther, the camera zooms in the opposite direction — warping space, collapsing depth, and making reality look… off.</p>
+      <p><strong>Perfect for:</strong></p>
+      <ul>
+        <li>🎥 Short films & visual experiments</li>
+        <li>📱 Surreal TikToks & Reels</li>
+        <li>😵 That unsettling, cinematic feeling</li>
+      </ul>
     </section>
 
     <section id="features" class="features">
       <div class="feature">
-        <h3>Manual Controls</h3>
-        <p>Adjust ISO, shutter speed, and focus for the perfect shot every time.</p>
+        <h3>Real-Time Dolly Zoom</h3>
+        <p>Capture the Vertigo effect in-camera, with no editing or extra gear.</p>
       </div>
       <div class="feature">
-        <h3>Sleek Skeuomorphic UI</h3>
-        <p>Engaging physical-feel buttons and dials inspired by classic cameras.</p>
+        <h3>Retro Aesthetic</h3>
+        <p>Skeuomorphic controls and CRT-style overlays give every shot an eerie, analog vibe.</p>
       </div>
       <div class="feature">
-        <h3>Real-time Filters</h3>
-        <p>Apply vintage and modern filters live as you shoot.</p>
+        <h3>Simple, Powerful Interface</h3>
+        <p>Move. Zoom. Done. You focus on the motion — SeverCam handles the magic.</p>
       </div>
+      <div class="feature">
+        <h3>Optional FX Mode</h3>
+        <p>Add a touch of distortion with a retro fish-eye filter, perfect for pushing things into the uncanny.</p>
+      </div>
+    </section>
+
+    <section id="preview" style="max-width:800px; margin:4rem auto; padding:0 2rem; text-align:center;">
+      <h2>Visual Preview</h2>
+      <!-- Insert looping video or animation here showing someone walking forward while the background stretches behind them, Hitchcock-style -->
+      <div style="margin:2rem 0;">
+        <video src="preview.mp4" autoplay loop muted playsinline style="max-width:100%; border-radius:var(--radius); box-shadow:0 8px 24px rgba(0,0,0,0.1);"></video>
+      </div>
+      <p>Unsettling. Beautiful. Addictive.<br>A handheld camera. A single move. A warped perspective.</p>
+    </section>
+
+    <section id="curious" style="max-width:800px; margin:4rem auto; padding:0 2rem;">
+      <h2>Made for the Curious</h2>
+      <p>SeverCam isn’t just a camera app — it’s a lens into the surreal. Whether you’re filming a dream sequence, music video, or just playing with perception, SeverCam makes it easy to twist space and time.</p>
     </section>
 
     <section id="download" class="hero" style="padding:3rem 2rem; background: var(--color-accent);">
       <div class="hero-content">
-        <h2 style="color: white; font-size:2rem; margin-bottom:1rem;">Ready to shoot?</h2>
-        <a href="https://appstore.com/severcam" class="btn-primary">Get it on the App Store</a>
+        <!-- Logo in download section -->
+        <img src="images/SeverCamLogo.png" alt="SeverCam Logo" class="download-logo">
+        <h2 style="color: white; font-size:2rem; margin-bottom:1rem;">📲 Get SeverCam</h2>
+        <p style="color: white; margin-bottom:1rem;">Available soon on the App Store</p>
+        <img src="appstore-badge-placeholder.png" alt="App Store Badge" style="max-width:200px; margin-bottom:1rem;">
+        <p style="color: white; margin: 1rem 0;">or</p>
+        <a href="https://appstore.com/severcam" class="btn-primary" style="margin-right:1rem;">App Store</a>
+        <a href="#beta" class="btn-primary">Join the TestFlight Beta</a>
       </div>
     </section>
 
